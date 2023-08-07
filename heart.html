@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="urf-8">
+        <style type="text/css">
+           .heart{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 150px;
+            width: 150px;
+            background-color: pink;
+            animation-name:beat;
+            animation-duration:0.8s;
+            animation-iteration-count: infinite;
+            transform: rotate(-45deg);
+            z-index: 99;
+            
+            
+           }
+           .heart::after {
+            content:"";
+            position:absolute;
+            left: 75px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: pink;
+        
+           }
+           .heart::before{
+            content:"";
+            position: absolute;
+            top:-75px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: pink;
+            
+           }
+           @keyframes beat{
+            60%{
+                transform: scale(0.6) rotate(-45deg);
+                
+            }
+           }
+
+           
+        </style>
+    </head>
+    <body >
+        <div class="heart"></div>
+        <!-- <div class="heart" style="top: 200px; bottom:200px; bottom: -300px;left: 200px;"></div> -->
+    </body>
+</html>
